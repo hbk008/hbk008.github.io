@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Harshit Bokadia</title>
+    <meta name="description" content="Explore AI/ML and computational neuroscience projects by Harshit Bokadia, showcasing expertise in machine learning, neural networks, and healthcare applications.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Harshit Bokadia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-sm">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Projects</h1>
+            <p class="lead">Explore my work in AI/ML and computational neuroscience</p>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="projects-section py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="filter-buttons">
+                        <button class="btn btn-outline-primary active filter-btn" data-filter="all">All Projects</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="ml">Machine Learning</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="neuro">Neuroscience</button>
+                        <button class="btn btn-outline-primary filter-btn" data-filter="healthcare">Healthcare</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="search-container">
+                        <div class="input-group">
+                            <input type="text" id="project-search" class="form-control" placeholder="Search projects...">
+                            <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row projects-container">
+                <!-- Project 1 -->
+                <div class="col-lg-6 mb-4 project-item" data-categories="ml healthcare">
+                    <div class="card h-100">
+                        <img src="assets/project1-placeholder.jpg" class="card-img-top" alt="Medication Recommendation System">
+                        <div class="card-body">
+                            <div class="tech-stack mb-2">
+                                <span class="badge bg-primary">PyTorch</span>
+                                <span class="badge bg-secondary">NLP</span>
+                                <span class="badge bg-info">Healthcare</span>
+                            </div>
+                            <h3 class="card-title">AI-Based Medication Recommendation System</h3>
+                            <p class="card-text">Developed a transformer-based medication recommendation system that analyzes patient data to suggest optimal treatment options for neurodivergent individuals. The system combines clinical guidelines with machine learning to provide personalized recommendations.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/med-recommender" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i> GitHub</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fas fa-external-link-alt me-1"></i> Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline-info"><i class="fas fa-file-alt me-1"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-lg-6 mb-4 project-item" data-categories="ml neuro">
+                    <div class="card h-100">
+                        <img src="assets/project2-placeholder.jpg" class="card-img-top" alt="EEG Analysis with Deep Learning">
+                        <div class="card-body">
+                            <div class="tech-stack mb-2">
+                                <span class="badge bg-primary">TensorFlow</span>
+                                <span class="badge bg-secondary">Time Series</span>
+                                <span class="badge bg-info">Neuroscience</span>
+                            </div>
+                            <h3 class="card-title">EEG Analysis with Neural ODEs</h3>
+                            <p class="card-text">Applied Neural Ordinary Differential Equations to model brain dynamics from EEG data. This project developed novel approaches to analyze temporal patterns in neural activity, with applications in understanding cognitive processes and neurological disorders.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/neural-ode-eeg" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i> GitHub</a>
+                                <a href="#" class="btn btn-sm btn-outline-info"><i class="fas fa-file-alt me-1"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-lg-6 mb-4 project-item" data-categories="ml">
+                    <div class="card h-100">
+                        <img src="assets/project3-placeholder.jpg" class="card-img-top" alt="Medical Ontologies with Holographic Reduced Representations">
+                        <div class="card-body">
+                            <div class="tech-stack mb-2">
+                                <span class="badge bg-primary">PyTorch</span>
+                                <span class="badge bg-secondary">NLP</span>
+                                <span class="badge bg-info">Knowledge Representation</span>
+                            </div>
+                            <h3 class="card-title">Medical Ontologies with Holographic Reduced Representations</h3>
+                            <p class="card-text">Developed a novel approach to encode medical knowledge using vector-symbolic architectures, specifically holographic reduced representations. This project bridges symbolic computation and deep learning for improved medical knowledge reasoning in transformer models.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/hrr-medical-ontology" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i> GitHub</a>
+                                <a href="https://openreview.net/forum?id=LN4zA2D8vd" class="btn btn-sm btn-outline-info"><i class="fas fa-file-alt me-1"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-lg-6 mb-4 project-item" data-categories="ml healthcare">
+                    <div class="card h-100">
+                        <img src="assets/project4-placeholder.jpg" class="card-img-top" alt="Interpretable AI for Melanoma Detection">
+                        <div class="card-body">
+                            <div class="tech-stack mb-2">
+                                <span class="badge bg-primary">PyTorch</span>
+                                <span class="badge bg-secondary">Computer Vision</span>
+                                <span class="badge bg-info">Healthcare</span>
+                            </div>
+                            <h3 class="card-title">Interpretable AI for Melanoma Detection</h3>
+                            <p class="card-text">Enhanced a VGG-16 convolutional neural network with attention modules for melanoma detection using the ISIC dataset. Developed novel metrics to evaluate the perceptual and semantic interpretability of saliency methods, improving trust and usability in AI-driven medical imaging.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/interpretable-melanoma-ai" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i> GitHub</a>
+                                <a href="https://doi.org/10.1002/ail2.77" class="btn btn-sm btn-outline-info"><i class="fas fa-file-alt me-1"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-lg-6 mb-4 project-item" data-categories="neuro healthcare">
+                    <div class="card h-100">
+                        <img src="assets/project5-placeholder.jpg" class="card-img-top" alt="Digital Biomarkers for Autism">
+                        <div class="card-body">
+                            <div class="tech-stack mb-2">
+                                <span class="badge bg-primary">MATLAB</span>
+                                <span class="badge bg-secondary">Signal Processing</span>
+                                <span class="badge bg-info">Healthcare</span>
+                            </div>
+                            <h3 class="card-title">Digital Biomarkers for Autism Diagnosis</h3>
+                            <p class="card-text">Designed digital biomarkers for autism diagnosis by analyzing wearable biosensor data during ADOS tests. Employed network theory for connectivity analysis, uncovering patterns in socio-motor interactions that may serve as objective measures for autism spectrum disorder diagnosis.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/yourusername/autism-digital-biomarkers" class="btn btn-sm btn-outline-primary"><i class="fab fa-github me-1"></i> GitHub</a>
+                                <a href="https://doi.org/10.3390/jpm10040159" class="btn btn-sm btn-outline-info"><i class="fas fa-file-alt me-1"></i> Paper</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2>Interested in Collaboration?</h2>
+                    <p class="lead">I'm always open to discussing new AI/ML research projects and opportunities.</p>
+                    <a href="contact.html" class="btn btn-primary mt-3">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>&copy; 2025 Harshit Bokadia. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="https://github.com/hbk008" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/hbk007" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://scholar.google.ca/citations?user=QxgwOOcAAAAJ&hl=en&oi=ao" target="_blank" class="social-icon"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
