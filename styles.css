@@ -197,24 +197,61 @@ img { max-width: 100%; display: block; }
 }
 
 .pub-venue {
-  font-size: 0.8rem; color: var(--text-light); font-weight: 500;
-  letter-spacing: 0.02em; margin-bottom: 0.3rem;
+  font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em;
+  margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
 }
-.pub-venue a { color: var(--text-light); font-weight: 600; }
+/* Journal name in teal */
+.pub-journal { color: var(--teal); font-weight: 600; }
+/* Year / citations in muted */
+.pub-meta-info { color: var(--text-light); }
+/* DOI/link inline */
+.pub-venue a { color: var(--blue); font-weight: 600; font-size: 0.78rem; }
 .pub-venue a:hover { color: var(--teal); }
+
+/* Author line */
+.pub-authors {
+  font-size: 0.82rem; color: var(--text-muted);
+  margin-bottom: 0.4rem; line-height: 1.6;
+  display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;
+}
+.author-me {
+  font-weight: 700; color: var(--teal);
+  background: var(--teal-light);
+  padding: 0.05rem 0.4rem; border-radius: 3px;
+  font-size: 0.82rem;
+}
+.author-other { color: var(--text-muted); }
+
+/* First-author badge — shown inline near authors */
+.first-author-badge {
+  display: inline-flex; align-items: center;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; background: #dcfce7; color: #15803d;
+  border: 1px solid #86efac; border-radius: 4px;
+  padding: 0.1rem 0.5rem; white-space: nowrap;
+}
+.coauthor-badge {
+  display: inline-flex; align-items: center;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; background: var(--blue-light); color: var(--blue);
+  border: 1px solid #bfdbfe; border-radius: 4px;
+  padding: 0.1rem 0.5rem; white-space: nowrap;
+}
+
 .pub-title {
-  font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
   color: var(--text); line-height: 1.4; margin-bottom: 0.6rem;
 }
 .pub-desc {
   font-size: 0.9rem; color: #4a5a78; line-height: 1.8; margin-bottom: 0.5rem;
 }
 .pub-methods {
-  font-size: 0.82rem; color: var(--text-light); margin-bottom: 0.75rem;
-  line-height: 1.6;
+  font-size: 0.82rem; margin-bottom: 0.75rem; line-height: 1.6;
 }
-.pub-methods strong { color: var(--text-muted); }
-.pub-links { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.pub-methods strong { color: var(--text-muted); font-weight: 600; }
+.pub-methods span { color: var(--purple); font-weight: 500; }
+
+.pub-links { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.25rem; }
 .pub-links a {
   font-size: 0.78rem; font-weight: 600; color: var(--teal);
   background: var(--teal-light); padding: 0.2rem 0.6rem; border-radius: 4px;
