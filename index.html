@@ -81,8 +81,17 @@
         </a>
       </div>
 
+      <div class="pub-tabs">
+        <button class="pub-tab active" data-tab="all">All</button>
+        <button class="pub-tab" data-tab="embodied">Embodied AI</button>
+        <button class="pub-tab" data-tab="llm">LLMs &amp; VSA</button>
+        <button class="pub-tab" data-tab="xai">XAI &amp; Interpretability</button>
+        <button class="pub-tab" data-tab="clinical">Clinical AI</button>
+        <button class="pub-tab" data-tab="neuro">Computational Neuroscience</button>
+      </div>
+
       <!-- GROUP 1: Embodied AI -->
-      <div class="pub-group">
+      <div class="pub-group" data-tab="embodied">
         <h3 class="pub-group-label label-teal">Embodied AI · World Models · Physical AI</h3>
 
         <div class="pub-row">
@@ -129,7 +138,7 @@
       </div>
 
       <!-- GROUP 2: LLMs / VSA -->
-      <div class="pub-group">
+      <div class="pub-group" data-tab="llm">
         <h3 class="pub-group-label label-blue">LLMs · Vector-Symbolic Architectures · Knowledge Representation</h3>
 
         <div class="pub-row">
@@ -156,7 +165,7 @@
       </div>
 
       <!-- GROUP 3: XAI -->
-      <div class="pub-group">
+      <div class="pub-group" data-tab="xai">
         <h3 class="pub-group-label label-orange">XAI · Interpretability · Medical Imaging</h3>
 
         <div class="pub-row">
@@ -184,7 +193,7 @@
       </div>
 
       <!-- GROUP 4: Biosignals / Clinical -->
-      <div class="pub-group">
+      <div class="pub-group" data-tab="clinical">
         <h3 class="pub-group-label label-green">Clinical AI · Precision Health · Biosignals</h3>
 
         <div class="pub-row pub-row-slim">
@@ -239,7 +248,7 @@
       </div>
 
       <!-- GROUP 5: Computational Neuroscience / ADOS -->
-      <div class="pub-group">
+      <div class="pub-group" data-tab="neuro">
         <h3 class="pub-group-label label-purple">Computational Neuroscience · Biosignals · Digitized ADOS</h3>
 
         <div class="pub-row">
@@ -279,13 +288,12 @@
           <ul class="cv-list">
             <li>
               <strong>MS Artificial Intelligence</strong>
-              <span class="cv-where">University of Texas at Austin &nbsp;·&nbsp; 2024–2027 (remote/part-time)</span>
-              <span class="cv-note">Seeking thesis advisor — embodied AI, world models, interpretability</span>
+              <span class="cv-where">University of Texas at Austin &nbsp;·&nbsp; 2024–2027</span>
             </li>
             <li>
               <strong>MS Industrial &amp; Systems Engineering</strong>
               <span class="cv-where">Rutgers University &nbsp;·&nbsp; 2016–2018</span>
-              <span class="cv-note">Thesis: Deep learning for virtual metrology (Samsung)</span>
+              <span class="cv-note">Thesis: Deep learning based virtual metrology for semiconductor manufacturing processes</span>
             </li>
             <li>
               <strong>BTech Mechanical Engineering</strong>
@@ -300,7 +308,7 @@
             <li>
               <strong>Research Associate</strong>
               <span class="cv-where">SUTD, Singapore &nbsp;·&nbsp; Mar 2026–present</span>
-              <span class="cv-note">Embodied AI · World model estimation · Bayesian inverse RL · MuJoCo · 400+ motion capture sequences</span>
+              <span class="cv-note">Embodied AI · World model estimation · Bayesian inverse RL · MuJoCo</span>
             </li>
             <li>
               <strong>Data Scientist</strong>
@@ -313,14 +321,9 @@
               <span class="cv-note">Precision health · medication recommendation AI · biosignal processing · POND network · REDCap · PostgreSQL</span>
             </li>
             <li>
-              <strong>Open Source Toolbox Intern</strong>
-              <span class="cv-where">MathWorks × INCF &nbsp;·&nbsp; Jul–Sep 2023 (part-time, remote)</span>
-              <span class="cv-note">MATLAB toolboxes for neuroscience · 2-photon imaging · brain network dynamics</span>
-            </li>
-            <li>
               <strong>Research Assistant II</strong>
               <span class="cv-where">Medical AI Group, University of Waterloo &nbsp;·&nbsp; May–Dec 2022</span>
-              <span class="cv-note">VSA language models · SNOMED-CT · MIMIC-IV · transformer fine-tuning · FHIR data · generative AI</span>
+              <span class="cv-note">Vector-Symbolic Architectures · language models for EHR · SNOMED-CT · MIMIC-IV · transformer fine-tuning · FHIR</span>
             </li>
             <li>
               <strong>Intern, NeuroAI</strong>
@@ -330,12 +333,12 @@
             <li>
               <strong>Research Staff (Coadjutant)</strong>
               <span class="cv-where">Cognitive &amp; Data Science Lab, Rutgers–Newark &nbsp;·&nbsp; Dec 2020–Jul 2021</span>
-              <span class="cv-note">Brain-Machine Interface · EEG cursor control · Bayesian Machine Teaching · PLDA · XAI for medical imaging</span>
+              <span class="cv-note">DARPA AFRL · Brain-Machine Interface · Bayesian Machine Teaching · PLDA · XAI for medical imaging</span>
             </li>
             <li>
               <strong>Research Staff (Coadjutant)</strong>
               <span class="cv-where">Rutgers Centre for Cognitive Science, New Brunswick &nbsp;·&nbsp; Sep 2018–Nov 2020</span>
-              <span class="cv-note">EEG · wearable biosensors · ADOS digital biomarkers · socio-motor dyads · network connectivity · DARPA AFRL</span>
+              <span class="cv-note">EEG · wearable biosensors · ADOS digital biomarkers · socio-motor dyads · network connectivity · EEG cursor control · BMI</span>
             </li>
           </ul>
         </div>
@@ -467,6 +470,20 @@
       let cur = '';
       sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
       navItems.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+    });
+
+    // Publication tabs
+    const tabs = document.querySelectorAll('.pub-tab');
+    const groups = document.querySelectorAll('.pub-group[data-tab]');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const selected = tab.dataset.tab;
+        groups.forEach(g => {
+          g.style.display = (selected === 'all' || g.dataset.tab === selected) ? 'block' : 'none';
+        });
+      });
     });
   </script>
 
