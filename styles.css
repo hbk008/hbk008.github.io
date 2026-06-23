@@ -398,3 +398,154 @@ img { max-width: 100%; display: block; }
   background: var(--teal-light);
   padding: 0.05rem 0.35rem; border-radius: 3px;
 }
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 1; transform: none; transition: none;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   CAREER TIMELINE
+═══════════════════════════════════════════ */
+.timeline-wrap {
+  margin-bottom: 3rem;
+}
+.timeline {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 0;
+}
+/* vertical centre line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--teal), var(--blue), var(--purple));
+  transform: translateX(-50%);
+  opacity: 0.25;
+}
+
+.tl-item {
+  display: flex;
+  width: 50%;
+  padding: 0 2.5rem 1.75rem 0;
+  position: relative;
+  box-sizing: border-box;
+}
+/* odd items: left side */
+.tl-item.reveal-left {
+  align-self: flex-start;
+  margin-left: 0;
+  text-align: right;
+  flex-direction: row-reverse;
+}
+/* even items: right side */
+.tl-item.reveal-right {
+  align-self: flex-start;
+  margin-left: 50%;
+  padding: 0 0 1.75rem 2.5rem;
+  text-align: left;
+}
+
+.tl-dot {
+  width: 13px; height: 13px;
+  border-radius: 50%;
+  border: 2px solid var(--surface);
+  box-shadow: 0 0 0 2px currentColor;
+  flex-shrink: 0;
+  position: absolute;
+  top: 4px;
+  z-index: 1;
+}
+.tl-item.reveal-left .tl-dot  { right: -6.5px; }
+.tl-item.reveal-right .tl-dot { left: -6.5px; }
+
+.dot-navy   { background: #1a2236; color: #1a2236; }
+.dot-teal   { background: var(--teal); color: var(--teal); }
+.dot-blue   { background: var(--blue); color: var(--blue); }
+.dot-orange { background: var(--orange); color: var(--orange); }
+.dot-purple { background: var(--purple); color: var(--purple); }
+
+.tl-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 320px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow-sm);
+}
+.tl-item.reveal-left .tl-content  { margin-right: 0.75rem; }
+.tl-item.reveal-right .tl-content { margin-left: 0.75rem; }
+
+.tl-year {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--text-light);
+}
+.tl-content strong {
+  font-family: var(--font-display); font-size: 0.88rem;
+  font-weight: 600; color: var(--text); line-height: 1.3;
+}
+.tl-org {
+  font-size: 0.78rem; color: var(--text-muted);
+}
+.tl-tag {
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em;
+  text-transform: uppercase; border-radius: 4px;
+  padding: 0.15rem 0.5rem; align-self: flex-start;
+  margin-top: 0.15rem;
+}
+/* reuse existing tag colours */
+.tl-item.reveal-left .tl-tag { align-self: flex-end; }
+
+/* ── Responsive: stack timeline on mobile ── */
+@media (max-width: 760px) {
+  .timeline::before { left: 16px; }
+  .tl-item.reveal-left,
+  .tl-item.reveal-right {
+    width: 100%; margin-left: 0;
+    padding: 0 0 1.5rem 3rem;
+    text-align: left;
+    flex-direction: row;
+  }
+  .tl-item.reveal-left .tl-dot,
+  .tl-item.reveal-right .tl-dot { left: 10px; right: auto; }
+  .tl-item.reveal-left .tl-content,
+  .tl-item.reveal-right .tl-content { margin-left: 0.5rem; margin-right: 0; }
+  .tl-item.reveal-left .tl-tag { align-self: flex-start; }
+  .tl-content { max-width: 100%; }
+}
