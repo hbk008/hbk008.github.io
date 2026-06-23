@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshit Bokadia — AI Researcher</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">HB</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO / ABOUT
+  ═══════════════════════════════════════════ -->
+  <section id="about" class="hero">
+    <div class="container hero-grid">
+
+      <div class="hero-text">
+        <p class="hero-eyebrow">Research Associate · SUTD Singapore</p>
+        <h1 class="hero-name">Harshit Bokadia</h1>
+        <p class="hero-tagline">
+          Embodied AI &amp; World Models &nbsp;·&nbsp; Probabilistic Reasoning &nbsp;·&nbsp; Interpretability
+        </p>
+
+        <p class="hero-bio">
+          I build AI systems that reason about physical behaviour — learning internal representations
+          of how agents move, explore, and adapt in the world. At SUTD (Singapore, MoE-funded), I design
+          Bayesian inverse-RL pipelines that infer learners' <em>world models</em> from high-dimensional
+          kinematic trajectories and scaffold open-ended embodied creativity in real time.
+        </p>
+        <p class="hero-bio">
+          My path here is deliberately cross-disciplinary: mechanical engineering gave me a systems
+          instinct for physical dynamics; industrial &amp; systems engineering and cognitive science at
+          Rutgers opened the door to neural computation and clinical AI; and applied work at Canadian
+          hospitals — on biosignals, neurodivergence, and precision health — sharpened my ability to
+          build models that hold up against messy, real-world data. I am now oriented toward the
+          intersection of <strong>physical AI, embodied agents, and world model learning</strong>, with
+          a parallel interest in <strong>mechanistic interpretability and alignment</strong> for LLMs and
+          VLMs — work I connect directly to my DARPA-adjacent XAI research and vector-symbolic
+          architecture contributions.
+        </p>
+        <p class="hero-bio">
+          I am currently pursuing an MS in AI at UT Austin (remote/part-time) and am actively seeking
+          a thesis advisor and research collaborations in these areas.
+        </p>
+
+        <ul class="focus-list">
+          <li><span class="tag">Embodied AI</span> World model learning · Bayesian inverse RL · MuJoCo humanoid simulation</li>
+          <li><span class="tag">LLMs / MLLMs</span> Vector-symbolic architectures · Knowledge-infused transformers · Post-training</li>
+          <li><span class="tag">Interpretability</span> Saliency-based XAI · Perceptual &amp; semantic metrics · Mechanistic interp.</li>
+          <li><span class="tag">Neuro / Clinical</span> EEG · Biosignals · Precision health · Autism &amp; neurodevelopmental AI</li>
+          <li><span class="tag">Engineering</span> MechE → robotics · ISE → operations research → probabilistic modeling</li>
+        </ul>
+
+        <div class="hero-links">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="assets/Harshit_Bokadia_CV.pdf" target="_blank">Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <!-- Replace photo.jpg with your actual filename -->
+        <img src="assets/photo.jpg" alt="Harshit Bokadia" class="hero-photo" />
+        <div class="hero-photo-bg"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       RESEARCH & PUBLICATIONS
+  ═══════════════════════════════════════════ -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Research &amp; Publications</h2>
+      <p class="section-sub">
+        <a href="https://scholar.google.ca/citations?user=QxgwOOcAAAAJ&hl=en" target="_blank" class="scholar-link">
+          Google Scholar ↗ &nbsp;(66 citations · h-index 4)
+        </a>
+      </p>
+
+      <!-- GROUP 1 -->
+      <div class="pub-group">
+        <h3 class="pub-group-title">
+          <span class="group-tag teal">Embodied AI · World Models · Physical AI</span>
+        </h3>
+
+        <div class="pub-card">
+          <div class="pub-meta">SUTD / MoE SoL Grant · 2026–ongoing</div>
+          <p class="pub-title">AI-Driven Scaffolding of Embodied Creativity</p>
+          <p class="pub-desc">
+            End-to-end pipeline for real-time estimation of learners' internal world models from
+            motion-capture kinematic data. We model human movement exploration as a Markov Decision
+            Process, run Bayesian inverse RL to recover reward structure and state-transition dynamics,
+            and dynamically scaffold open-ended creativity. MuJoCo humanoid simulation grounds model
+            learning in physically plausible motor behaviour.
+          </p>
+          <div class="pub-links">
+            <span class="pub-role">Role: Research Associate (lead engineer)</span>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-meta">MOCO 2020 · ACM · DOI: 10.1145/3401956.3404232</div>
+          <p class="pub-title">Neural Connectivity Evolution during Adaptive Learning with and without Proprioception</p>
+          <p class="pub-desc">
+            Network-theoretic analysis of EEG-derived neural connectivity as participants learn novel motor
+            tasks with and without proprioceptive feedback. Reveals how sensorimotor deprivation reshapes
+            cortical communication graphs — directly informing world-model design for embodied agents that
+            must learn from impoverished sensory streams.
+          </p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1145/3401956.3404232" target="_blank">ACM DL ↗</a>
+            <span class="pub-role">First Author</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUP 2 -->
+      <div class="pub-group">
+        <h3 class="pub-group-title">
+          <span class="group-tag blue">LLMs · Vector-Symbolic Architectures · Knowledge Representation</span>
+        </h3>
+
+        <div class="pub-card">
+          <div class="pub-meta">ACM KDD Workshop on Knowledge-Infused Learning · 2024</div>
+          <p class="pub-title">Encoding Medical Ontologies with Holographic Reduced Representations for Transformers</p>
+          <p class="pub-desc">
+            Introduces holographic reduced representations (HRRs) — a class of vector-symbolic
+            architectures — as a structured, binding-preserving way to encode medical ontologies into
+            transformer token spaces. Demonstrates improved knowledge retention and compositional
+            generalization in clinical NLP tasks. Directly relevant to knowledge-infused LLM pretraining,
+            structured post-training, and efficient inference with external knowledge.
+          </p>
+          <div class="pub-links">
+            <a href="https://openreview.net/forum?id=LN4zA2D8vd" target="_blank">OpenReview ↗</a>
+            <span class="pub-role">Co-Author (University of Waterloo collaboration)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUP 3 -->
+      <div class="pub-group">
+        <h3 class="pub-group-title">
+          <span class="group-tag orange">XAI · Interpretability · Medical Imaging</span>
+        </h3>
+
+        <div class="pub-card">
+          <div class="pub-meta">Applied AI Letters · 2022 · DOI: 10.1002/ail2.77 · 13 citations</div>
+          <p class="pub-title">Evaluating Perceptual and Semantic Interpretability of Saliency Methods: A Case Study of Melanoma</p>
+          <p class="pub-desc">
+            DARPA XAI-adjacent work. Designed two novel evaluation metrics for saliency-based explanations:
+            one measuring perceptual coherence of attribution maps, another comparing maps against
+            dermatologist-defined semantic features. Benchmarked six saliency methods on VGG-16 across
+            ISIC data distributions. Enables adaptive method selection for high-stakes clinical AI —
+            and provides a principled framework transferable to mechanistic interpretability of LLMs and VLMs.
+          </p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1002/ail2.77" target="_blank">Wiley ↗</a>
+            <span class="pub-role">First Author</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUP 4 -->
+      <div class="pub-group">
+        <h3 class="pub-group-title">
+          <span class="group-tag purple">Computational Neuroscience · Clinical AI · Biosignals</span>
+        </h3>
+
+        <div class="pub-card">
+          <div class="pub-meta">Journal of Personalized Medicine · 2020 · DOI: 10.3390/jpm10040159 · 20 citations</div>
+          <p class="pub-title">Digitized ADOS: Social Interactions beyond the Limits of the Naked Eye</p>
+          <p class="pub-desc">
+            Applied wearable biosensors and statistical signal processing to the Autism Diagnostic
+            Observation Schedule (ADOS), extracting high-dimensional, sub-second kinematic features
+            from socio-motor dyads that are invisible to human observers. Demonstrates how fine-grained
+            movement data can ground clinical assessment — a foundation for embodied AI systems that
+            model social and adaptive behaviour.
+          </p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.3390/jpm10040159" target="_blank">MDPI ↗</a>
+            <span class="pub-role">First Author</span>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-meta">medRxiv preprint · 2025 · 1 citation</div>
+          <p class="pub-title">A Precision Health Approach to Medication Management in Neurodivergence</p>
+          <p class="pub-desc">
+            Multi-cohort international study (four datasets) developing and validating ML models for
+            medication management in neurodevelopmental conditions. Combines structured clinical features
+            with probabilistic modeling to support individualized treatment recommendations — applied
+            clinical AI at the intersection of precision medicine and neurodiversity.
+          </p>
+          <div class="pub-links">
+            <a href="https://scholar.google.ca/citations?user=QxgwOOcAAAAJ&hl=en" target="_blank">Google Scholar ↗</a>
+            <span class="pub-role">Co-Author (Holland Bloorview / McMaster)</span>
+          </div>
+        </div>
+
+        <div class="pub-card">
+          <div class="pub-meta">Clinical Child and Family Psychology Review · 2024 · 26 citations</div>
+          <p class="pub-title">Predictors of Health-Related Quality of Life in Neurodivergent Children: A Systematic Review</p>
+          <p class="pub-desc">
+            Systematic review synthesizing evidence on QoL predictors across neurodevelopmental conditions.
+            Informed precision health AI pipelines at Holland Bloorview.
+          </p>
+          <div class="pub-links">
+            <a href="https://scholar.google.ca/citations?user=QxgwOOcAAAAJ&hl=en" target="_blank">Google Scholar ↗</a>
+            <span class="pub-role">Co-Author</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════════ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag teal">Embodied AI · World Models</span>
+            <span class="project-year">2026 – present</span>
+          </div>
+          <h3 class="project-title">Embodied Creativity Pipeline · SUTD</h3>
+          <p class="project-desc">
+            <strong>Problem:</strong> How do we measure and scaffold open-ended creativity in physical
+            movement — and can we build an AI that infers a learner's internal world model in real time?
+          </p>
+          <p class="project-desc">
+            <strong>My role:</strong> Lead engineer on the full AI pipeline. I implemented MuJoCo
+            humanoid simulation for physically plausible trajectory generation, time-delay embedding for
+            kinematic state-space construction, Bayesian inverse RL (GAIL-family) to recover reward
+            functions and transition dynamics from motion capture data, and UMAP-based movement cluster
+            visualization for real-time scaffolding feedback.
+          </p>
+          <p class="project-desc">
+            <strong>Methods:</strong> Bayesian inverse RL · MDP formulation · MuJoCo · UMAP · wearable
+            physiological sensors (pupil kinematics, GSR, HR)
+          </p>
+          <p class="project-desc">
+            <strong>Connection:</strong> Directly addresses open-ended learning — a frontier problem
+            shared by embodied AI, model-based RL, and developmental robotics.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag blue">LLMs · Vector-Symbolic Architectures</span>
+            <span class="project-year">2023 – 2024</span>
+          </div>
+          <h3 class="project-title">Holographic Reduced Representations for Transformers · Waterloo</h3>
+          <p class="project-desc">
+            <strong>Problem:</strong> Transformers struggle to encode relational and hierarchical medical
+            ontologies in a structure-preserving way during pretraining.
+          </p>
+          <p class="project-desc">
+            <strong>My role:</strong> Co-designed the HRR encoding scheme, ran experiments on medical
+            ontology injection into transformer token spaces, and contributed to evaluation across clinical
+            NLP benchmarks.
+          </p>
+          <p class="project-desc">
+            <strong>Methods:</strong> Holographic Reduced Representations (VSA family) · PyTorch ·
+            UMLS medical ontologies · transformer fine-tuning
+          </p>
+          <p class="project-desc">
+            <strong>Connection:</strong> Grounds my interest in structured knowledge in LLMs —
+            relevant to post-training, efficient inference, and multimodal grounding for VLMs.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag orange">XAI · Mechanistic Interpretability</span>
+            <span class="project-year">2020 – 2022</span>
+          </div>
+          <h3 class="project-title">Saliency Evaluation Framework for Clinical AI · Rutgers / DARPA XAI</h3>
+          <p class="project-desc">
+            <strong>Problem:</strong> Existing saliency methods for medical imaging lacked rigorous,
+            clinically grounded evaluation metrics — making it impossible to select methods for
+            high-stakes deployment.
+          </p>
+          <p class="project-desc">
+            <strong>My role:</strong> First author. Designed the full evaluation framework, implemented
+            two novel metrics (perceptual coherence + semantic alignment to expert features), ran
+            comparative benchmarks across six saliency methods on a VGG-16 melanoma classifier.
+          </p>
+          <p class="project-desc">
+            <strong>Methods:</strong> PyTorch · VGG-16 · ISIC dataset · GradCAM · LIME · SHAP ·
+            custom perceptual/semantic metrics
+          </p>
+          <p class="project-desc">
+            <strong>Connection:</strong> The evaluation framework I designed has a direct analogue in
+            mechanistic interpretability for LLMs — where we similarly need principled metrics for
+            attribution faithfulness and semantic alignment.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag purple">Clinical AI · Mentorship</span>
+            <span class="project-year">2024 – 2025</span>
+          </div>
+          <h3 class="project-title">Sociodemographic Bias in Adaptive Functioning · Holland Bloorview</h3>
+          <p class="project-desc">
+            <strong>Problem:</strong> Standardized adaptive functioning assessments used in clinical
+            decisions for neurodivergent children are systematically biased by socioeconomic status,
+            sex, and ethnicity.
+          </p>
+          <p class="project-desc">
+            <strong>My role:</strong> Mentor to intern Zuhair Qureshi (McMaster). Guided study design,
+            feature engineering from the POND Network dataset (n=1,254), XGBoost modeling with
+            15-fold cross-validation, bias analysis via Mann-Whitney testing across demographic subgroups,
+            and disparity ratio visualization. Work presented as a research poster.
+          </p>
+          <p class="project-desc">
+            <strong>Methods:</strong> XGBoost · Mann-Whitney testing · Feature importance · Parity ratios
+            · POND Network dataset
+          </p>
+          <p class="project-desc">
+            <strong>Impact:</strong> Identified statistically significant bias across all demographic
+            groupings — informing precision health and bias-aware clinical tools for pediatric populations.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag purple">Computational Neuroscience · Biosignals</span>
+            <span class="project-year">2018 – 2020</span>
+          </div>
+          <h3 class="project-title">Neural Connectivity &amp; Digitized ADOS · Rutgers Cognitive Science</h3>
+          <p class="project-desc">
+            <strong>Problem:</strong> Clinical observation of motor and social behaviour in autism
+            misses sub-second, high-dimensional dynamics that may carry diagnostic signal.
+          </p>
+          <p class="project-desc">
+            <strong>My role:</strong> First author on two papers. Applied EEG signal processing and
+            network-theoretic analysis (graph measures of neural connectivity) to motor learning
+            paradigms; separately applied wearable biosensors to ADOS sessions to extract
+            kinematic features from socio-motor dyads.
+          </p>
+          <p class="project-desc">
+            <strong>Methods:</strong> EEG · EEGLAB · MATLAB · Graph theory (network neuroscience) ·
+            Wearable inertial sensors · Time-series analysis
+          </p>
+          <p class="project-desc">
+            <strong>Connection:</strong> This is the empirical root of my interest in embodied AI —
+            physical behaviour as a window into internal states — that now drives my world model work at SUTD.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CV
+  ═══════════════════════════════════════════ -->
+  <section id="cv" class="section section-alt">
+    <div class="container cv-section">
+      <h2 class="section-title">CV</h2>
+
+      <div class="cv-grid">
+        <div class="cv-block">
+          <h3 class="cv-heading">Education</h3>
+          <ul class="cv-list">
+            <li>
+              <strong>MS Artificial Intelligence</strong> · University of Texas at Austin
+              <span class="cv-date">2024 – 2027 (remote/part-time)</span>
+              <span class="cv-note">Seeking thesis advisor — embodied AI, world models, interpretability</span>
+            </li>
+            <li>
+              <strong>MS Industrial &amp; Systems Engineering</strong> · Rutgers University
+              <span class="cv-date">2016 – 2018</span>
+              <span class="cv-note">Thesis: Deep learning for virtual metrology (Samsung)</span>
+            </li>
+            <li>
+              <strong>BTech Mechanical Engineering</strong> · Rajasthan Technical University
+              <span class="cv-date">2008 – 2012</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv-block">
+          <h3 class="cv-heading">Experience</h3>
+          <ul class="cv-list">
+            <li>
+              <strong>Research Associate</strong> · SUTD, Singapore
+              <span class="cv-date">Mar 2026 – present</span>
+              <span class="cv-note">Embodied AI · World model estimation · Bayesian inverse RL</span>
+            </li>
+            <li>
+              <strong>Research Engineer / Data Scientist</strong> · Holland Bloorview Kids Rehabilitation Hospital, Toronto
+              <span class="cv-date">2023 – 2026</span>
+              <span class="cv-note">Clinical AI · Precision health · Biosignals · Neurodivergence</span>
+            </li>
+            <li>
+              <strong>AI/ML Research</strong> · Rutgers / Cognitive Science Center
+              <span class="cv-date">2018 – 2022</span>
+              <span class="cv-note">Computational neuroscience · EEG · XAI · DARPA-adjacent</span>
+            </li>
+            <li>
+              <strong>Project Engineer</strong> · UltraTech, Aditya Birla Group
+              <span class="cv-date">2012 – 2014</span>
+              <span class="cv-note">Industry 4.0 · Process optimization</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cv-block">
+          <h3 class="cv-heading">Selected Publications</h3>
+          <ul class="cv-list cv-pubs">
+            <li>Bokadia et al. (2022). Evaluating perceptual &amp; semantic interpretability of saliency methods. <em>Applied AI Letters</em>. [13 citations]</li>
+            <li>Bokadia et al. (2020). Digitized ADOS: Social interactions beyond the limits of the naked eye. <em>Journal of Personalized Medicine</em>. [20 citations]</li>
+            <li>Bokadia et al. (2020). Neural connectivity evolution during adaptive learning. <em>MOCO 2020, ACM</em>. [5 citations]</li>
+            <li>Hu, Yu, ..., Bokadia, et al. (2024). Encoding medical ontologies with HRRs for transformers. <em>ACM KDD Workshop</em>. [1 citation]</li>
+            <li>Vandewouw, Niroomand, Bokadia, et al. (2025). Precision health for medication management in neurodivergence. <em>medRxiv</em>.</li>
+          </ul>
+        </div>
+
+        <div class="cv-block">
+          <h3 class="cv-heading">Stack &amp; Methods</h3>
+          <div class="skills-grid">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">MuJoCo</span>
+            <span class="skill-tag">Bayesian Inverse RL</span>
+            <span class="skill-tag">MATLAB / EEGLAB</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">NumPy / Pandas</span>
+            <span class="skill-tag">Vector-Symbolic Architectures</span>
+            <span class="skill-tag">EEG Signal Processing</span>
+            <span class="skill-tag">XGBoost</span>
+            <span class="skill-tag">Graph Neural Nets</span>
+            <span class="skill-tag">UMAP / Dimensionality Reduction</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-download">
+        <a class="btn btn-primary" href="assets/Harshit_Bokadia_CV.pdf" target="_blank">Download Full CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container contact-section">
+      <h2 class="section-title">Contact &amp; Links</h2>
+      <p class="contact-intro">
+        I'm open to research collaborations, thesis advising discussions, and roles in
+        AI research and engineering. Feel free to reach out.
+      </p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:harshitbokadia&#64;gmail&#46;com">
+          <span class="contact-icon">✉</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-val">harshitbokadia [at] gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://scholar.google.ca/citations?user=QxgwOOcAAAAJ&hl=en" target="_blank">
+          <span class="contact-icon">◆</span>
+          <span class="contact-label">Google Scholar</span>
+          <span class="contact-val">66 citations · h-index 4</span>
+        </a>
+        <a class="contact-card" href="https://github.com/hbk008" target="_blank">
+          <span class="contact-icon">⌥</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-val">github.com/hbk008</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/harshitbokadia" target="_blank">
+          <span class="contact-icon">in</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-val">linkedin.com/in/harshitbokadia</span>
+        </a>
+      </div>
+
+      <p class="contact-note">
+        Canadian Citizen · Currently based in Singapore (work pass) · Open to US, Canada, Singapore positions
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Harshit Bokadia · Built with HTML/CSS · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+    }
+
+    // Highlight active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 80) current = s.getAttribute('id');
+      });
+      navItems.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+
+</body>
+</html>
