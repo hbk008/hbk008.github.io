@@ -105,17 +105,17 @@
       <div class="pub-tabs">
         <button class="pub-tab active" data-tab="all">All</button>
         <button class="pub-tab" data-tab="embodied">Embodied AI</button>
-        <button class="pub-tab" data-tab="llm">LLMs &amp; VSA</button>
         <button class="pub-tab" data-tab="xai">XAI &amp; Interpretability</button>
-        <button class="pub-tab" data-tab="clinical">Clinical AI</button>
+        <button class="pub-tab" data-tab="llm">LLMs &amp; VSA</button>
         <button class="pub-tab" data-tab="neuro">Computational Neuroscience</button>
+        <button class="pub-tab" data-tab="clinical">Clinical AI</button>
       </div>
 
       <!-- GROUP 1: Embodied AI -->
       <div class="pub-group" data-tab="embodied">
         <h3 class="pub-group-label label-teal">Embodied AI · World Models · Physical AI</h3>
 
-        <div class="pub-row reveal">
+        <div class="pub-row reveal featured-pub">
           <div class="pub-figure">
             <img src="assets/embodied.jpg" alt="Embodied creativity pipeline figure" />
           </div>
@@ -136,7 +136,7 @@
           </div>
         </div>
 
-        <div class="pub-row reveal">
+        <div class="pub-row reveal featured-pub">
           <div class="pub-figure">
             <img src="assets/moco.jpg" alt="MOCO EEG neural connectivity pipeline" />
           </div>
@@ -153,6 +153,34 @@
             <p class="pub-methods"><strong>Methods:</strong> EEG · EEGLAB · Cross-coherence · Graph-theoretic connectivity analysis</p>
             <div class="pub-links">
               <a href="https://doi.org/10.1145/3401956.3404232" target="_blank">ACM DL ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GROUP 3: XAI -->
+      <div class="pub-group" data-tab="xai">
+        <h3 class="pub-group-label label-orange">XAI · Interpretability · Medical Imaging</h3>
+
+        <div class="pub-row reveal featured-pub">
+          <div class="pub-figure">
+            <img src="assets/xai.jpg" alt="Saliency map comparison grid for melanoma" />
+          </div>
+          <div class="pub-content">
+            <p class="pub-venue"><span class="pub-journal">Applied AI Letters</span> <span class="pub-meta-info">· 2022 · 13 citations · DARPA/AFRL funded</span> · <a href="https://doi.org/10.1002/ail2.77" target="_blank">DOI ↗</a></p>
+            <p class="pub-authors"><span class="author-me">Bokadia H.</span> <span class="first-author-badge">First Author</span> <span class="author-other">, Yang S.C.H., Li Z., Folke T., Shafto P.</span></p>
+            <p class="pub-title">Evaluating Perceptual and Semantic Interpretability of Saliency Methods: A Case Study of Melanoma</p>
+            <p class="pub-desc">
+              Designed two novel evaluation metrics for saliency-based XAI: visual incoherence
+              (perceptual coherence of attribution maps) and textbook feature overlap (semantic
+              alignment to dermatologist-defined ABCDE features). Benchmarked six saliency methods on
+              VGG-16 across the ISIC melanoma dataset. Enables adaptive method selection for
+              high-stakes clinical AI — a framework directly transferable to mechanistic
+              interpretability of LLMs and VLMs.
+            </p>
+            <p class="pub-methods"><strong>Methods:</strong> VGG-16 · GradCAM · SHAP · LIME · RISE · Occlusion · PyTorch · ISIC dataset</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1002/ail2.77" target="_blank">Wiley ↗</a>
             </div>
           </div>
         </div>
@@ -186,34 +214,32 @@
         </div>
       </div>
 
-      <!-- GROUP 3: XAI -->
-      <div class="pub-group" data-tab="xai">
-        <h3 class="pub-group-label label-orange">XAI · Interpretability · Medical Imaging</h3>
+      <!-- GROUP 5: Computational Neuroscience / ADOS -->
+      <div class="pub-group" data-tab="neuro">
+        <h3 class="pub-group-label label-purple">Computational Neuroscience · Biosignals · Digitized ADOS</h3>
 
-        <div class="pub-row reveal">
+        <div class="pub-row reveal featured-pub">
           <div class="pub-figure">
-            <img src="assets/xai.jpg" alt="Saliency map comparison grid for melanoma" />
+            <img src="assets/ados.jpg" alt="Digitized ADOS biosensor figure" />
           </div>
           <div class="pub-content">
-            <p class="pub-venue"><span class="pub-journal">Applied AI Letters</span> <span class="pub-meta-info">· 2022 · 13 citations · DARPA/AFRL funded</span> · <a href="https://doi.org/10.1002/ail2.77" target="_blank">DOI ↗</a></p>
-            <p class="pub-authors"><span class="author-me">Bokadia H.</span> <span class="first-author-badge">First Author</span> <span class="author-other">, Yang S.C.H., Li Z., Folke T., Shafto P.</span></p>
-            <p class="pub-title">Evaluating Perceptual and Semantic Interpretability of Saliency Methods: A Case Study of Melanoma</p>
+            <p class="pub-venue"><span class="pub-journal">Journal of Personalized Medicine</span> <span class="pub-meta-info">· 2020 · 20 citations</span> · <a href="https://doi.org/10.3390/jpm10040159" target="_blank">DOI ↗</a></p>
+            <p class="pub-authors"><span class="author-me">Bokadia H.</span> <span class="first-author-badge">First Author</span> <span class="author-other">, Rai R., Torres E.B.</span></p>
+            <p class="pub-title">Digitized ADOS: Social Interactions beyond the Limits of the Naked Eye</p>
             <p class="pub-desc">
-              Designed two novel evaluation metrics for saliency-based XAI: visual incoherence
-              (perceptual coherence of attribution maps) and textbook feature overlap (semantic
-              alignment to dermatologist-defined ABCDE features). Benchmarked six saliency methods on
-              VGG-16 across the ISIC melanoma dataset. Enables adaptive method selection for
-              high-stakes clinical AI — a framework directly transferable to mechanistic
-              interpretability of LLMs and VLMs.
+              Applied wearable biosensors and statistical signal processing to the Autism Diagnostic
+              Observation Schedule (ADOS), extracting high-dimensional sub-second kinematic features
+              from socio-motor dyads invisible to human observers. Network connectivity analysis of
+              cross-coherence matrices reveals dynamic social coordination patterns — a biosignals
+              foundation for embodied AI systems that model social and adaptive behaviour.
             </p>
-            <p class="pub-methods"><strong>Methods:</strong> VGG-16 · GradCAM · SHAP · LIME · RISE · Occlusion · PyTorch · ISIC dataset</p>
+            <p class="pub-methods"><strong>Methods:</strong> Wearable inertial sensors · Cross-coherence · Network connectivity · ADOS-2 protocol</p>
             <div class="pub-links">
-              <a href="https://doi.org/10.1002/ail2.77" target="_blank">Wiley ↗</a>
+              <a href="https://doi.org/10.3390/jpm10040159" target="_blank">MDPI ↗</a>
             </div>
           </div>
         </div>
       </div>
-
       <!-- GROUP 4: Biosignals / Clinical -->
       <div class="pub-group" data-tab="clinical">
         <h3 class="pub-group-label label-green">Clinical AI · Precision Health · Biosignals</h3>
@@ -269,32 +295,6 @@
         </div>
       </div>
 
-      <!-- GROUP 5: Computational Neuroscience / ADOS -->
-      <div class="pub-group" data-tab="neuro">
-        <h3 class="pub-group-label label-purple">Computational Neuroscience · Biosignals · Digitized ADOS</h3>
-
-        <div class="pub-row reveal">
-          <div class="pub-figure">
-            <img src="assets/ados.jpg" alt="Digitized ADOS biosensor figure" />
-          </div>
-          <div class="pub-content">
-            <p class="pub-venue"><span class="pub-journal">Journal of Personalized Medicine</span> <span class="pub-meta-info">· 2020 · 20 citations</span> · <a href="https://doi.org/10.3390/jpm10040159" target="_blank">DOI ↗</a></p>
-            <p class="pub-authors"><span class="author-me">Bokadia H.</span> <span class="first-author-badge">First Author</span> <span class="author-other">, Rai R., Torres E.B.</span></p>
-            <p class="pub-title">Digitized ADOS: Social Interactions beyond the Limits of the Naked Eye</p>
-            <p class="pub-desc">
-              Applied wearable biosensors and statistical signal processing to the Autism Diagnostic
-              Observation Schedule (ADOS), extracting high-dimensional sub-second kinematic features
-              from socio-motor dyads invisible to human observers. Network connectivity analysis of
-              cross-coherence matrices reveals dynamic social coordination patterns — a biosignals
-              foundation for embodied AI systems that model social and adaptive behaviour.
-            </p>
-            <p class="pub-methods"><strong>Methods:</strong> Wearable inertial sensors · Cross-coherence · Network connectivity · ADOS-2 protocol</p>
-            <div class="pub-links">
-              <a href="https://doi.org/10.3390/jpm10040159" target="_blank">MDPI ↗</a>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
   </section>

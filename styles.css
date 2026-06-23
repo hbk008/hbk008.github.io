@@ -549,3 +549,13 @@ img { max-width: 100%; display: block; }
   .tl-item.reveal-left .tl-tag { align-self: flex-start; }
   .tl-content { max-width: 100%; }
 }
+
+/* ═══ FEATURED (FIRST-AUTHOR) PUB CARDS ═══ */
+.featured-pub {
+  border-left: 3px solid var(--teal);
+  background: linear-gradient(to right, rgba(13,148,136,0.03) 0%, var(--surface) 60%);
+}
+.featured-pub:hover {
+  border-left-color: var(--teal);
+  border-color: var(--teal);
+}
