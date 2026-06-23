@@ -317,3 +317,21 @@ img { max-width: 100%; display: block; }
   .section-header { flex-direction: column; }
   .contact-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ═══ STRUCTURED SKILLS GRID ═══ */
+.skills-grid-structured {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.skill-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.skill-group-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.skill-tag {
+  font-size: 0.78rem; font-weight: 500; padding: 0.25rem 0.7rem;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 20px; color: var(--text-muted);
+}
