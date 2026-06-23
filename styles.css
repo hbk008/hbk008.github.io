@@ -560,3 +560,12 @@ img { max-width: 100%; display: block; }
   border-left-color: var(--teal);
   border-color: var(--teal);
 }
+
+/* CV request note */
+.cv-request-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  padding-top: 0.5rem;
+}
+.cv-request-note a { color: var(--teal); font-weight: 500; }
