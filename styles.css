@@ -36,7 +36,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
@@ -100,14 +100,14 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1.5rem; font-weight: 500;
 }
 .hero-bio {
-  font-size: 0.93rem; color: #374560;
-  line-height: 1.8; max-width: 680px; margin-bottom: 0.9rem;
+  font-size: 0.97rem; color: #374560;
+  line-height: 1.85; max-width: 680px; margin-bottom: 0.9rem;
 }
 .hero-bio em { color: var(--teal); font-style: normal; font-weight: 500; }
 .hero-bio strong { color: var(--text); font-weight: 600; }
 
 .focus-list { list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.5rem; }
-.focus-list li { font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: baseline; gap: 0.6rem; }
+.focus-list li { font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: baseline; gap: 0.6rem; }
 
 .tag {
   font-family: var(--font-display); font-size: 0.68rem; font-weight: 600;
@@ -197,20 +197,20 @@ img { max-width: 100%; display: block; }
 }
 
 .pub-venue {
-  font-size: 0.75rem; color: var(--text-light); font-weight: 500;
+  font-size: 0.8rem; color: var(--text-light); font-weight: 500;
   letter-spacing: 0.02em; margin-bottom: 0.3rem;
 }
 .pub-venue a { color: var(--text-light); font-weight: 600; }
 .pub-venue a:hover { color: var(--teal); }
 .pub-title {
-  font-family: var(--font-display); font-size: 1rem; font-weight: 600;
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
   color: var(--text); line-height: 1.4; margin-bottom: 0.6rem;
 }
 .pub-desc {
-  font-size: 0.84rem; color: #4a5a78; line-height: 1.75; margin-bottom: 0.5rem;
+  font-size: 0.9rem; color: #4a5a78; line-height: 1.8; margin-bottom: 0.5rem;
 }
 .pub-methods {
-  font-size: 0.78rem; color: var(--text-light); margin-bottom: 0.75rem;
+  font-size: 0.82rem; color: var(--text-light); margin-bottom: 0.75rem;
   line-height: 1.6;
 }
 .pub-methods strong { color: var(--text-muted); }
@@ -234,7 +234,7 @@ img { max-width: 100%; display: block; }
 
 /* ═══════ CV ═══════ */
 .cv-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem;
 }
 .cv-block {
   background: var(--surface); border: 1px solid var(--border);
@@ -247,10 +247,10 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
 }
 .cv-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-.cv-list li { font-size: 0.875rem; }
+.cv-list li { font-size: 0.925rem; }
 .cv-list strong { color: var(--text); font-weight: 600; }
-.cv-where { display: block; font-size: 0.78rem; color: var(--text-muted); margin-top: 0.1rem; }
-.cv-note  { display: block; font-size: 0.75rem; color: var(--text-light); font-style: italic; margin-top: 0.1rem; }
+.cv-where { display: block; font-size: 0.82rem; color: var(--text-muted); margin-top: 0.1rem; }
+.cv-note  { display: block; font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-top: 0.15rem; }
 
 .skills-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .skill-tag {
@@ -304,6 +304,7 @@ img { max-width: 100%; display: block; }
   .pub-row-slim { grid-template-columns: 1fr; }
   .cv-grid { grid-template-columns: 1fr; }
   .cv-block-wide { grid-column: 1; }
+  .cv-block-wide { grid-column: 1; }
 }
 @media (max-width: 580px) {
   .nav-links { display: none; flex-direction: column; position: absolute;
@@ -349,3 +350,14 @@ img { max-width: 100%; display: block; }
 }
 .pub-tab:hover { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
 .pub-tab.active { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+/* ═══ AUTHOR HIGHLIGHTING ═══ */
+.pub-authors {
+  font-size: 0.78rem; color: var(--text-light);
+  margin-bottom: 0.5rem; line-height: 1.5;
+}
+.author-me {
+  font-weight: 700; color: var(--teal);
+  background: var(--teal-light);
+  padding: 0.05rem 0.35rem; border-radius: 3px;
+}
