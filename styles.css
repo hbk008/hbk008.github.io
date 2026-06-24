@@ -665,3 +665,48 @@ img { max-width: 100%; display: block; }
   .hero-sidebar-info { text-align: center; }
   .sidebar-links { align-items: center; }
 }
+
+/* ═══ BIO TRAIL BULLETS ═══ */
+.bio-trail {
+  list-style: none;
+  margin: 1rem 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0;
+}
+.bio-trail li {
+  font-size: 0.92rem;
+  color: #374560;
+  line-height: 1.65;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.bio-trail li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+}
+.bio-trail li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ═══ SIDEBAR SVG ICON FIX ═══ */
+.si-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  flex-shrink: 0;
+  color: var(--teal);
+}
+.si-icon svg {
+  display: block;
+}
