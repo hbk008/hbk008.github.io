@@ -79,9 +79,9 @@
           My research builds AI pipelines for real-time estimation of learners' internal
           <em>world models</em> from motion-capture kinematic data, modelling movement exploration
           as a Markov Decision Process, running Bayesian inverse RL to recover reward structure and
-          state-transition dynamics, and using these inferred world models to scaffold
+          state-transition dynamics, and using diffusion models and inferred world models to scaffold
           <strong>open-ended embodied creativity</strong> in real time. This work connects foundational
-          questions in <strong>world model learning</strong> to the physical, embodied setting.
+          questions in <strong>world model learning and generative modelling</strong> to the physical, embodied setting.
         </p>
         <p class="hero-bio" style="margin-bottom:0.6rem;">
           My background spans a deliberate sequence of research and engineering roles, each building toward my current focus:
@@ -97,19 +97,12 @@
           <li><span class="bio-date">2025</span><strong>Data Scientist, Waypoint Centre for Mental Health Care</strong> — production AI deployment in healthcare; EHR integration via Azure ML; regulatory-compliant ML pipelines.</li>
         </ul>
         <p class="hero-bio">
-          My current work on world model learning from behavioral data sits at the intersection of
-          these threads — and points toward where I want to go next: <strong>robot learning and
-          robot foundation models</strong>, world model architectures that generalize across embodiments
-          and tasks, and the post-training and inference machinery that makes large models deployable
-          and trustworthy. My interpretability work — building evaluation frameworks for explanation
-          faithfulness under DARPA/AFRL — gives me a concrete foothold in
-          <strong>mechanistic interpretability of LLMs</strong>: understanding what circuits and
-          features actually encode, not just what outputs look like.
+          My current work sits at the intersection of these threads and points toward where I want to go next: <strong>robot learning, robot foundation models, and diffusion-based generative models for embodied agents</strong>, world model architectures that generalize across tasks and embodiments, and the post-training and inference machinery that makes large models deployable and trustworthy. My interpretability work, building evaluation frameworks for explanation faithfulness under DARPA/AFRL, gives me a concrete foothold in <strong>mechanistic interpretability of LLMs</strong>: understanding what circuits and features actually encode, not just what outputs look like.
         </p>
 
         <p class="hero-bio-label">Research interests</p>
         <ul class="focus-list">
-          <li><span class="tag tag-teal">Embodied AI / Robotics</span> World model learning and representation in agents · robot learning and robot foundation models · model-based RL for generalization under partial observability · inferring latent dynamics from high-dimensional behavioral data</li>
+          <li><span class="tag tag-teal">Embodied AI / Robotics</span> World model learning and representation in agents · robot learning and robot foundation models · diffusion models for embodied action generation · model-based RL for generalization under partial observability · inferring latent dynamics from high-dimensional behavioral data</li>
           <li><span class="tag tag-blue">LLMs / MLLMs</span> Post-training (RLHF, DPO, instruction tuning) · inference efficiency (speculative decoding, vLLM, quantization) · VSA-structured knowledge encoding</li>
           <li><span class="tag tag-orange">Interpretability</span> Mechanistic interpretability of transformer circuits · feature geometry and superposition in LLMs · evaluation frameworks for explanation faithfulness (background: saliency metrics, semantic overlap, DARPA XAI)</li>
           <li><span class="tag tag-purple">Clinical AI</span> Biosignal processing (EEG, accelerometry) · medication recommendation in neurodivergent populations · regulatory-compliant ML deployment</li>
@@ -155,11 +148,11 @@
             <p class="pub-desc">
               End-to-end pipeline for real-time estimation of learners' internal world models from
               motion-capture data. Human movement exploration is modelled as an MDP; Bayesian inverse RL
-              recovers reward structure and state-transition dynamics; UMAP-clustered movement embeddings
-              drive adaptive goal-state scaffolding. MuJoCo humanoid simulation grounds model learning
-              in physically plausible motor behaviour.
+              recovers reward structure and state-transition dynamics; diffusion models generate
+              adaptive goal states; UMAP-clustered movement embeddings drive scaffolding decisions.
+              MuJoCo humanoid simulation grounds model learning in physically plausible motor behaviour.
             </p>
-            <p class="pub-methods"><strong>Methods:</strong> Bayesian inverse RL · MDP · MuJoCo · UMAP · wearable physiological sensors</p>
+            <p class="pub-methods"><strong>Methods:</strong> Bayesian inverse RL · MDP · Diffusion models · MuJoCo · UMAP · wearable physiological sensors</p>
             <div class="pub-links">
             </div>
           </div>
@@ -176,7 +169,7 @@
             <p class="pub-desc">
               Network-theoretic analysis of EEG-derived neural connectivity as participants learn
               novel motor tasks with and without proprioceptive feedback. Reveals how sensorimotor
-              deprivation reshapes cortical communication graphs — directly informing world-model
+              deprivation reshapes cortical communication graphs, directly informing world-model
               design for embodied agents learning from impoverished sensory streams.
             </p>
             <p class="pub-methods"><strong>Methods:</strong> EEG · EEGLAB · Cross-coherence · Graph-theoretic connectivity analysis</p>
@@ -204,7 +197,7 @@
               (perceptual coherence of attribution maps) and textbook feature overlap (semantic
               alignment to dermatologist-defined ABCDE features). Benchmarked six saliency methods on
               VGG-16 across the ISIC melanoma dataset. Enables adaptive method selection for
-              high-stakes clinical AI — a framework directly transferable to mechanistic
+              high-stakes clinical AI, a framework directly transferable to mechanistic
               interpretability of LLMs and VLMs.
             </p>
             <p class="pub-methods"><strong>Methods:</strong> VGG-16 · GradCAM · SHAP · LIME · RISE · Occlusion · PyTorch · ISIC dataset</p>
@@ -228,7 +221,7 @@
             <p class="pub-authors"><span class="author-other">Hu B.X., Yu T., Tuinstra T., Rezai R., </span><span class="author-me">Bokadia H.</span> <span class="coauthor-badge">Co-Author</span><span class="author-other">, DiMaio R., Tripp B.P.</span></p>
             <p class="pub-title">Encoding Medical Ontologies with Holographic Reduced Representations for Transformers</p>
             <p class="pub-desc">
-              Introduces holographic reduced representations (HRRs) — a vector-symbolic architecture —
+              Introduces holographic reduced representations (HRRs), a vector-symbolic architecture,
               as a structure-preserving method to encode medical ontologies into transformer token spaces.
               HRRBase embeddings outperform unstructured embeddings on out-of-distribution disease
               prediction, including patients with entirely unseen ICD codes. Directly relevant to
@@ -259,7 +252,7 @@
               Applied wearable biosensors and statistical signal processing to the Autism Diagnostic
               Observation Schedule (ADOS), extracting high-dimensional sub-second kinematic features
               from socio-motor dyads invisible to human observers. Network connectivity analysis of
-              cross-coherence matrices reveals dynamic social coordination patterns — a biosignals
+              cross-coherence matrices reveals dynamic social coordination patterns, a biosignals
               foundation for embodied AI systems that model social and adaptive behaviour.
             </p>
             <p class="pub-methods"><strong>Methods:</strong> Wearable inertial sensors · Cross-coherence · Network connectivity · ADOS-2 protocol</p>
@@ -314,7 +307,7 @@
               Mentored intern Zuhair Qureshi (McMaster) on this study using the POND Network dataset
               (n=1,254). XGBoost with 15-fold cross-validation identified statistically significant
               disparities in adaptive functioning composite scores across socioeconomic status, sex, and
-              ethnicity subgroups — findings that inform bias-aware precision health tools for
+              ethnicity subgroups, and the findings inform bias-aware precision health tools for
               pediatric populations.
             </p>
             <p class="pub-methods"><strong>Methods:</strong> XGBoost · Mann-Whitney testing · Feature importance · POND Network dataset</p>
@@ -552,6 +545,7 @@
               <div class="skill-tags">
                 <span class="skill-tag">World Model Learning</span>
                 <span class="skill-tag">Embodied AI</span>
+                <span class="skill-tag">Diffusion Models</span>
                 <span class="skill-tag">MuJoCo</span>
                 <span class="skill-tag">Bayesian Inverse RL</span>
                 <span class="skill-tag">Model-based RL</span>
