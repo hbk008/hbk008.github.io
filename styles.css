@@ -77,7 +77,7 @@ img { max-width: 100%; display: block; }
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 3.5rem;
   align-items: start;
 }
@@ -569,3 +569,99 @@ img { max-width: 100%; display: block; }
   padding-top: 0.5rem;
 }
 .cv-request-note a { color: var(--teal); font-weight: 500; }
+
+
+/* ═══ HERO SIDEBAR (Jiaxin Pei style) ═══ */
+.hero-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  position: sticky;
+  top: 80px;
+}
+.hero-photo {
+  width: 190px; height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.hero-sidebar-info {
+  width: 100%;
+  text-align: center;
+}
+.hero-name-side {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.01em;
+}
+.hero-role-side {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.sidebar-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  text-align: left;
+  padding: 0 0.25rem;
+}
+.sidebar-links li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+}
+.si-icon {
+  font-size: 0.85rem;
+  color: var(--teal);
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.sidebar-links a {
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.15s;
+}
+.sidebar-links a:hover { color: var(--teal); }
+.sidebar-cv-note {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Remove old hero-name from text col (now in sidebar) */
+.hero-name { display: none; }
+.hero-tagline { display: none; }
+.hero-links { display: none; }
+
+/* Responsive sidebar */
+@media (max-width: 860px) {
+  .hero-sidebar {
+    flex-direction: row;
+    align-items: flex-start;
+    position: static;
+    gap: 1.5rem;
+  }
+  .hero-sidebar-info { text-align: left; }
+  .hero-photo { width: 110px; height: 110px; }
+  .sidebar-links { gap: 0.4rem; }
+}
+@media (max-width: 580px) {
+  .hero-sidebar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-sidebar-info { text-align: center; }
+  .sidebar-links { align-items: center; }
+}
