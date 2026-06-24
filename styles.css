@@ -698,15 +698,33 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
 }
 
-/* ═══ SIDEBAR SVG ICON FIX ═══ */
+/* ═══ SIDEBAR SVG ICONS — brand colors ═══ */
 .si-icon {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 18px;
   flex-shrink: 0;
-  color: var(--teal);
 }
-.si-icon svg {
-  display: block;
+.si-icon svg { display: block; }
+
+.si-email   { color: #6b7280; }   /* neutral grey */
+.si-scholar { color: #4285F4; }   /* Google blue */
+.si-github  { color: #24292e; }   /* GitHub black */
+.si-linkedin{ color: #0A66C2; }   /* LinkedIn blue */
+
+
+/* ═══ BIO TRAIL DATE BADGE ═══ */
+.bio-date {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+  background: var(--teal-light);
+  border-radius: 4px;
+  padding: 0.05rem 0.45rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  white-space: nowrap;
 }
