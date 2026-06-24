@@ -63,11 +63,18 @@ img { max-width: 100%; display: block; }
 }
 .nav-links { list-style: none; display: flex; gap: 2rem; }
 .nav-links a {
-  font-size: 0.875rem; font-weight: 500; color: var(--text-muted);
+  font-size: 1rem; font-weight: 500; color: var(--text-muted);
   transition: color 0.15s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
 .nav-toggle { display: none; background: none; border: none; font-size: 1.3rem; cursor: pointer; color: var(--text); }
+
+.coming-soon-note {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-style: italic;
+  padding: 3rem 0;
+}
 
 /* ═══════ HERO ═══════ */
 .hero {
