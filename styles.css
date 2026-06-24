@@ -200,6 +200,11 @@ img { max-width: 100%; display: block; }
 }
 .pub-row:hover { box-shadow: var(--shadow); border-color: #c8d4e8; }
 
+/* Full-width single-column pub row */
+.pub-row-full {
+  grid-template-columns: 1fr;
+}
+
 /* Slim rows (2 columns of text, no figure) */
 .pub-row-slim {
   grid-template-columns: 1fr 1fr;
