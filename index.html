@@ -381,9 +381,33 @@
         </div>
       </div>
 
-      <!-- GROUP 5: Computational Neuroscience / ADOS -->
+      <!-- GROUP 5: Computational Neuroscience / Biosignals -->
       <div class="pub-group" data-tab="neuro">
-        <h3 class="pub-group-label label-purple">Computational Neuroscience / Biosignals · Digitized ADOS</h3>
+        <h3 class="pub-group-label label-purple">Computational Neuroscience / Biosignals</h3>
+
+        <!-- Duplicate of the Neural Connectivity (MOCO) entry above, shown only
+             under the Computational Neuroscience / Biosignals tab and the
+             combined AI in Healthcare tab, so it isn't double-listed under All. -->
+        <div class="pub-row reveal featured-pub" id="moco-dup" style="display:none;">
+          <div class="pub-figure">
+            <img src="assets/moco.jpg" alt="MOCO EEG neural connectivity pipeline" />
+          </div>
+          <div class="pub-content">
+            <p class="pub-venue"><span class="pub-journal">ACM MOCO 2020</span> <span class="pub-meta-info">· 5 citations</span> · <a href="https://doi.org/10.1145/3401956.3404232" target="_blank">DOI ↗</a></p>
+            <p class="pub-authors"><span class="author-me">Bokadia H.</span> <span class="first-author-badge">First Author</span> <span class="author-other">, Cole J., Torres E.B.</span></p>
+            <p class="pub-title">Neural Connectivity Evolution during Adaptive Learning with and without Proprioception</p>
+            <p class="pub-desc">
+              Network-theoretic analysis of EEG-derived neural connectivity as participants learn
+              novel motor tasks with and without proprioceptive feedback. Reveals how sensorimotor
+              deprivation reshapes cortical communication graphs, directly informing world-model
+              design for embodied agents learning from impoverished sensory streams.
+            </p>
+            <p class="pub-methods"><strong>Methods:</strong> EEG · EEGLAB · Cross-coherence · Graph-theoretic connectivity analysis</p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1145/3401956.3404232" target="_blank">ACM DL ↗</a>
+            </div>
+          </div>
+        </div>
 
         <div class="pub-row reveal featured-pub">
           <div class="pub-figure">
@@ -776,9 +800,9 @@
     const tabs = document.querySelectorAll('.pub-tab');
     const groups = document.querySelectorAll('.pub-group[data-tab]');
     // Groups included in the combined "AI in Healthcare" tab, with display
-    // order for that tab only (XAI and LLM/VSA surfaced first, ahead of
-    // Clinical AI and Computational Neuroscience / Biosignals).
-    const healthcareOrder = { xai: 1, llm: 2, clinical: 3, neuro: 4 };
+    // order for that tab only (XAI and LLM/VSA surfaced first, then
+    // Computational Neuroscience / Biosignals, then Clinical AI).
+    const healthcareOrder = { xai: 1, llm: 2, neuro: 3, clinical: 4 };
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
@@ -802,6 +826,14 @@
             g.style.display = (g.dataset.tab === selected) ? 'block' : 'none';
           }
         });
+
+        // Neural Connectivity (MOCO) also belongs under Computational
+        // Neuroscience / Biosignals; show the duplicate entry there (and in
+        // the combined Healthcare view) without double-listing it under All.
+        const mocoDup = document.getElementById('moco-dup');
+        if (mocoDup) {
+          mocoDup.style.display = (selected === 'neuro' || selected === 'healthcare') ? 'block' : 'none';
+        }
       });
     });
 
