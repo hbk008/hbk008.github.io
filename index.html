@@ -80,7 +80,7 @@
           I am an AI researcher working across <strong>clinical AI, embodied intelligence, and
           interpretability</strong>, with a track record of deploying machine learning in high-stakes
           healthcare settings and current research at the frontier of world model learning. Over the
-          past two years I built <strong>medication-recommendation and precision-health pipelines</strong>
+          past three years I built <strong>medication-recommendation and precision-health pipelines</strong>
           for neurodivergent populations at Holland Bloorview Kids Rehabilitation Hospital, then
           deployed regulatory-compliant, EHR-integrated ML in production at Waypoint Centre for Mental
           Health Care. I now bring that same rigor to embodied AI research as a Research Associate at
@@ -95,7 +95,7 @@
           questions in <strong>world model learning and generative modelling</strong> to the physical, embodied setting.
         </p>
         <p class="hero-bio" style="margin-bottom:0.6rem;">
-          My background spans a deliberate sequence of research and engineering roles, each building toward my current focus:
+          My background spans research and engineering roles across computational neuroscience, clinical AI, and embodied intelligence, each one following from real interest and the work before it:
         </p>
         <ul class="bio-trail">
           <li><span class="bio-date">2008–2014</span><strong>BTech, Mechanical Engineering</strong> followed by nearly two years as a <strong>Project Engineer in Industry 4.0 manufacturing in India</strong>.</li>
@@ -108,7 +108,7 @@
           <li><span class="bio-date">2025</span><strong>Data Scientist, Waypoint Centre for Mental Health Care</strong> — production AI deployment in healthcare; EHR integration via Azure ML; regulatory-compliant ML pipelines.</li>
         </ul>
         <p class="hero-bio">
-          My current work sits at the intersection of these threads and points toward where I want to go next: <strong>robot learning, robot foundation models, and diffusion-based generative models for embodied agents</strong>, world model architectures that generalize across tasks and embodiments, and the post-training and inference machinery that makes large models deployable and trustworthy. My interpretability work, building evaluation frameworks for explanation faithfulness under DARPA/AFRL, gives me a concrete foothold in <strong>mechanistic interpretability of LLMs</strong>: understanding what circuits and features actually encode, not just what outputs look like.
+          Looking ahead, I want to extend this embodied AI work toward <strong>robot learning, robot foundation models, and diffusion-based generative models for embodied agents</strong> — world model architectures that generalize across tasks and embodiments. My interpretability background also points toward a direction I care about deeply: <strong>AI safety and security</strong>. Building evaluation frameworks for explanation faithfulness under DARPA/AFRL gave me a concrete foothold in <strong>mechanistic interpretability of LLMs</strong>, understanding what circuits and features actually encode rather than just what outputs look like, and I want to bring that same rigor to trustworthy, verifiable AI systems.
         </p>
 
         <p class="hero-bio-label">Research interests</p>
@@ -157,7 +157,7 @@
           <span class="tag tag-purple">Track 2</span>
           <h3 class="area-card-title">Clinical AI &amp; Healthcare Deployment</h3>
           <p class="area-card-text">
-            Two years of production-facing clinical AI: medication recommendation systems
+            Three years of production-facing clinical AI: medication recommendation systems
             and precision-health pipelines at Holland Bloorview Kids Rehabilitation Hospital,
             followed by regulatory-compliant, EHR-integrated ML deployment at Waypoint Centre
             for Mental Health Care.
@@ -195,11 +195,14 @@
       <div class="pub-tabs">
         <button class="pub-tab active" data-tab="all">All</button>
         <button class="pub-tab" data-tab="embodied">Embodied AI</button>
+        <button class="pub-tab" data-tab="healthcare">AI in Healthcare</button>
         <button class="pub-tab" data-tab="clinical">Clinical AI</button>
         <button class="pub-tab" data-tab="xai">XAI &amp; Interpretability</button>
         <button class="pub-tab" data-tab="llm">LLMs &amp; VSA</button>
-        <button class="pub-tab" data-tab="neuro">Computational Neuroscience</button>
+        <button class="pub-tab" data-tab="neuro">Computational Neuroscience / Biosignals</button>
       </div>
+
+      <div class="pub-groups">
 
       <!-- GROUP 1: Embodied AI -->
       <div class="pub-group" data-tab="embodied">
@@ -380,7 +383,7 @@
 
       <!-- GROUP 5: Computational Neuroscience / ADOS -->
       <div class="pub-group" data-tab="neuro">
-        <h3 class="pub-group-label label-purple">Computational Neuroscience · Biosignals · Digitized ADOS</h3>
+        <h3 class="pub-group-label label-purple">Computational Neuroscience / Biosignals · Digitized ADOS</h3>
 
         <div class="pub-row reveal featured-pub">
           <div class="pub-figure">
@@ -403,6 +406,7 @@
             </div>
           </div>
         </div>
+      </div>
       </div>
 
     </div>
@@ -771,13 +775,32 @@
     // Publication tabs
     const tabs = document.querySelectorAll('.pub-tab');
     const groups = document.querySelectorAll('.pub-group[data-tab]');
+    // Groups included in the combined "AI in Healthcare" tab, with display
+    // order for that tab only (XAI and LLM/VSA surfaced first, ahead of
+    // Clinical AI and Computational Neuroscience / Biosignals).
+    const healthcareOrder = { xai: 1, llm: 2, clinical: 3, neuro: 4 };
+
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         tabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         const selected = tab.dataset.tab;
+
         groups.forEach(g => {
-          g.style.display = (selected === 'all' || g.dataset.tab === selected) ? 'block' : 'none';
+          g.style.order = '';
+          if (selected === 'all') {
+            g.style.display = 'block';
+          } else if (selected === 'healthcare') {
+            const groupTab = g.dataset.tab;
+            if (healthcareOrder[groupTab]) {
+              g.style.display = 'block';
+              g.style.order = healthcareOrder[groupTab];
+            } else {
+              g.style.display = 'none';
+            }
+          } else {
+            g.style.display = (g.dataset.tab === selected) ? 'block' : 'none';
+          }
         });
       });
     });

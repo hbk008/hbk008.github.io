@@ -219,6 +219,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ═══════ PUBLICATION GROUPS ═══════ */
+.pub-groups { display: flex; flex-direction: column; }
 .pub-group { margin-bottom: 3rem; }
 .pub-group-label {
   font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
