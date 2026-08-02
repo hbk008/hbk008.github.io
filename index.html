@@ -188,7 +188,7 @@
       <div class="section-header">
         <h2 class="section-title reveal">Publications</h2>
         <a href="https://scholar.google.ca/citations?user=QxgwOOcAAAAJ&hl=en" target="_blank" class="scholar-badge">
-          Google Scholar &nbsp;·&nbsp; 66 citations &nbsp;·&nbsp; h-index 4 ↗
+          Google Scholar &nbsp;·&nbsp; 71 citations &nbsp;·&nbsp; h-index 4 ↗
         </a>
       </div>
 
@@ -442,12 +442,22 @@
       <h2 class="section-title reveal">Projects</h2>
       <p class="projects-intro reveal">
         A selection of research and applied projects across embodied AI, clinical deployment,
-        interpretability, and computational neuroscience.
+        interpretability, computational neuroscience, and GenAI engineering.
       </p>
 
-      <div class="projects-grid">
+      <div class="pub-tabs project-tabs reveal">
+        <button class="pub-tab active" data-tab="all">All</button>
+        <button class="pub-tab" data-tab="embodied">Embodied AI</button>
+        <button class="pub-tab" data-tab="healthcare">Healthcare AI</button>
+        <button class="pub-tab" data-tab="xai">XAI &amp; Interpretability</button>
+        <button class="pub-tab" data-tab="llm">GenAI / LLM Engineering</button>
+        <button class="pub-tab" data-tab="neuro">Computational Neuroscience / Biosignals</button>
+        <button class="pub-tab" data-tab="manufacturing">Manufacturing</button>
+      </div>
 
-        <div class="project-card reveal">
+      <div class="projects-grid" id="projects-list">
+
+        <div class="project-card reveal" data-tab="embodied">
           <div class="project-meta">
             <span class="tag tag-teal">Embodied AI</span>
             <span class="project-status">Ongoing</span>
@@ -456,7 +466,17 @@
           <p class="project-desc">Real-time pipeline at SUTD estimating learners' internal world models from motion-capture data, using Bayesian inverse RL and diffusion-based goal generation to adaptively scaffold open-ended movement exploration.</p>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="llm">
+          <div class="project-meta">
+            <span class="tag tag-blue">GenAI / LLM Engineering</span>
+            <span class="project-status">Live in Production</span>
+          </div>
+          <p class="project-title">Aether Wealth — AI-Powered Investment Intelligence Platform</p>
+          <p class="project-desc">Full-stack GenAI platform (Next.js/TypeScript, PostgreSQL) that orchestrates market data, institutional filings, and social sentiment from 4+ external APIs into a single Claude-powered reasoning layer, producing explainable, auditable investment insights through a portfolio-aware conversational assistant. Includes a cost-aware caching layer and per-user context/state management — a deterministic data-augmented generation pipeline rather than an autonomous multi-step agent.</p>
+          <a class="project-link" href="https://aether-wealth.vercel.app/" target="_blank">Live Demo ↗</a>
+        </div>
+
+        <div class="project-card reveal" data-tab="healthcare">
           <div class="project-meta">
             <span class="tag tag-purple">Clinical AI</span>
             <span class="project-status">In Preparation</span>
@@ -464,7 +484,8 @@
           <p class="project-title">Cellular Senescence Classification from Live-Cell Microscopy</p>
           <p class="project-desc">Volunteer collaboration with SickKids Hospital / University of Toronto: a time-series deep learning pipeline (BiLSTM) classifying cellular senescence states, with SHAP-based explainability and rigor checks against over-claiming interpretability, engineered on Compute Canada's national HPC cluster for a project targeting <em>Nature Ageing</em>.</p>
         </div>
-        <div class="project-card reveal">
+
+        <div class="project-card reveal" data-tab="healthcare">
           <div class="project-meta">
             <span class="tag tag-purple">Clinical AI</span>
             <span class="project-meta-year">Waypoint / Holland Bloorview · 2025</span>
@@ -474,9 +495,9 @@
           <a class="project-link" href="https://www.medrxiv.org/content/10.1101/2025.03.12.25323683v4" target="_blank">medRxiv ↗</a>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="llm">
           <div class="project-meta">
-            <span class="tag tag-blue">LLMs / VSA</span>
+            <span class="tag tag-blue">GenAI / LLM Engineering</span>
             <span class="project-meta-year">UWaterloo · 2024</span>
           </div>
           <p class="project-title">Vector-Symbolic Medical Ontology Encoding</p>
@@ -484,7 +505,7 @@
           <a class="project-link" href="https://openreview.net/forum?id=LN4zA2D8vd" target="_blank">OpenReview ↗</a>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="xai">
           <div class="project-meta">
             <span class="tag tag-orange">XAI &amp; Interpretability</span>
             <span class="project-meta-year">Rutgers-Newark · 2022</span>
@@ -494,7 +515,7 @@
           <a class="project-link" href="https://doi.org/10.1002/ail2.77" target="_blank">DOI ↗</a>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="neuro">
           <div class="project-meta">
             <span class="tag tag-green">Computational Neuroscience / Biosignals</span>
             <span class="project-meta-year">Rutgers · 2020</span>
@@ -504,7 +525,7 @@
           <a class="project-link" href="https://doi.org/10.3390/jpm10040159" target="_blank">DOI ↗</a>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="neuro">
           <div class="project-meta">
             <span class="tag tag-green">Computational Neuroscience / Biosignals</span>
             <span class="project-meta-year">Rutgers · 2020</span>
@@ -514,7 +535,7 @@
           <a class="project-link" href="https://doi.org/10.1145/3401956.3404232" target="_blank">DOI ↗</a>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="healthcare">
           <div class="project-meta">
             <span class="tag tag-purple">Clinical AI</span>
             <span class="project-meta-year">Holland Bloorview · 2024–2025</span>
@@ -524,7 +545,7 @@
           <a class="project-link" href="https://hollandbloorview.ca/sites/default/files/2024-07/Zuhair%20Qureshi%20poster.pdf" target="_blank">Poster PDF ↗</a>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="healthcare">
           <div class="project-meta">
             <span class="tag tag-purple">Clinical AI</span>
             <span class="project-meta-year">Holland Bloorview / UofT · 2025</span>
@@ -534,7 +555,7 @@
           <a class="project-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5270022" target="_blank">SSRN ↗</a>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="healthcare">
           <div class="project-meta">
             <span class="tag tag-purple">Clinical AI</span>
             <span class="project-meta-year">Holland Bloorview · 2024</span>
@@ -544,8 +565,7 @@
           <a class="project-link" href="https://link.springer.com/article/10.1007/s10567-023-00462-3" target="_blank">Springer ↗</a>
         </div>
 
-
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="manufacturing">
           <div class="project-meta">
             <span class="project-status">MS Thesis · Semiconductor Manufacturing</span>
           </div>
@@ -553,7 +573,7 @@
           <p class="project-desc">Deep learning models predicting process-critical measurements directly from sensor data in semiconductor manufacturing, reducing reliance on costly physical metrology steps. MS thesis, Rutgers Industrial &amp; Systems Engineering.</p>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal" data-tab="manufacturing">
           <div class="project-meta">
             <span class="project-status">Industry 4.0 · Manufacturing</span>
           </div>
@@ -909,9 +929,10 @@
       navItems.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
     });
 
-    // Publication tabs
-    const tabs = document.querySelectorAll('.pub-tab');
-    const groups = document.querySelectorAll('.pub-group[data-tab]');
+    // Publication tabs (scoped to the Publications section only, so this
+    // doesn't collide with the separate Projects tabs below)
+    const tabs = document.querySelectorAll('#research .pub-tab');
+    const groups = document.querySelectorAll('#research .pub-group[data-tab]');
     // Groups included in the combined "AI in Healthcare" tab, with display
     // order for that tab only (XAI and LLM/VSA surfaced first, then
     // Computational Neuroscience / Biosignals, then Clinical AI).
@@ -947,6 +968,24 @@
         if (mocoDup) {
           mocoDup.style.display = (selected === 'neuro' || selected === 'healthcare') ? 'block' : 'none';
         }
+      });
+    });
+
+    // Project tabs (scoped to the Projects section; each project card has a
+    // single home tab, so this is a plain filter — no "healthcare" aggregate
+    // reordering trick needed here, unlike the Publications tabs above)
+    const projectTabs = document.querySelectorAll('.project-tabs .pub-tab');
+    const projectCards = document.querySelectorAll('#projects-list .project-card[data-tab]');
+
+    projectTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        projectTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const selected = tab.dataset.tab;
+
+        projectCards.forEach(card => {
+          card.style.display = (selected === 'all' || card.dataset.tab === selected) ? 'flex' : 'none';
+        });
       });
     });
 
