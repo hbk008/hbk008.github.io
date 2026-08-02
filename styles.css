@@ -872,3 +872,7 @@ img { max-width: 100%; display: block; }
   vertical-align: middle;
   white-space: nowrap;
 }
+.bio-highlight {
+  color: var(--rose);
+  font-weight: 600;
+}
