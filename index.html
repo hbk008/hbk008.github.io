@@ -98,14 +98,14 @@
           My background spans research and engineering roles across computational neuroscience, AI, and embodied intelligence. Along the way I've worked directly with <strong>clinicians, hospital leadership, government funders, startups, CROs (Contract Research Organizations), and non-profits</strong> — translating stakeholder needs into deployed systems across manufacturing, neuroscience, AI, and healthcare:
         </p>
         <ul class="bio-trail">
-          <li><span class="bio-date">2008–2014</span><strong>BTech, Mechanical Engineering</strong> followed by nearly two years as a <strong>Project Engineer in Industry 4.0 manufacturing in India</strong>.</li>
+          <li><span class="bio-date">2008–2014</span><span class="bio-partner">Contract Firms &amp; Suppliers</span><strong>BTech, Mechanical Engineering</strong> followed by nearly two years as a <strong>Project Engineer in Industry 4.0 manufacturing in India</strong>, coordinating with contract firms, suppliers/vendors, engineering departments, and DuPont safety teams.</li>
           <li><span class="bio-date">2016–2018</span><strong>MS, Industrial and Systems Engineering, Rutgers</strong> — depth in optimization, statistics, and systems thinking; thesis on deep learning for semiconductor process control.</li>
-          <li><span class="bio-date">2018–2020</span><strong>Computational neuroscience and cognitive science, Rutgers</strong> — electroencephalography (EEG), motor control and sensorimotor integration, Brain-Machine Interfaces (BMI), neural connectivity analysis, and digital biomarkers for autism including the Autism Diagnostic Observation Schedule (ADOS).</li>
-          <li><span class="bio-date">2020–2021</span><strong>Explainable AI (XAI) research under DARPA (Defense Advanced Research Projects Agency) / AFRL (Air Force Research Laboratory), Rutgers-Newark</strong> — novel perceptual and semantic interpretability metrics for medical imaging.</li>
+          <li><span class="bio-date">2018–2020</span><span class="bio-partner">NJ Startup Partner</span><strong>Computational neuroscience and cognitive science, Rutgers</strong> — electroencephalography (EEG), motor control and sensorimotor integration, Brain-Machine Interfaces (BMI), neural connectivity analysis, and digital biomarkers for autism including the Autism Diagnostic Observation Schedule (ADOS); funded via Rutgers' Office of Technology Commercialization in collaboration with an NJ-based tech startup.</li>
+          <li><span class="bio-date">2020–2021</span><span class="bio-partner">Government-Funded</span><strong>Explainable AI (XAI) research under DARPA (Defense Advanced Research Projects Agency) / AFRL (Air Force Research Laboratory), Rutgers-Newark</strong> — novel perceptual and semantic interpretability metrics for medical imaging.</li>
           <li><span class="bio-date">2021</span><strong>NeuroAI Intern, Mila</strong> — neural ODE modeling, EEG analysis, and generative modeling of neural dynamics.</li>
-          <li><span class="bio-date">2022</span><strong>Medical AI group, University of Waterloo</strong> — vector-symbolic architectures for structured knowledge encoding in clinical NLP.</li>
-          <li><span class="bio-date">2023–2025</span><strong>Research Engineer, Holland Bloorview Kids Rehabilitation Hospital</strong> — clinical data science for neurodivergent populations; medication recommendation AI; biosignal processing; large-scale POND (Province of Ontario Neurodevelopmental Disorders) network clinical trial data.</li>
-          <li><span class="bio-date">2025</span><strong>Data Scientist, Waypoint Centre for Mental Health Care</strong> — production AI deployment in healthcare; EHR integration via Azure ML; regulatory-compliant ML pipelines.</li>
+          <li><span class="bio-date">2022</span><span class="bio-partner">Toronto Startup Partner</span><strong>Medical AI group, University of Waterloo</strong> — vector-symbolic architectures for structured knowledge encoding in clinical NLP, in collaboration with a Toronto-based health-tech startup.</li>
+          <li><span class="bio-date">2023–2025</span><span class="bio-partner">CROs &amp; Hospital Leadership</span><strong>Research Engineer, Holland Bloorview Kids Rehabilitation Hospital</strong> — clinical data science for neurodivergent populations; medication recommendation AI; biosignal processing; large-scale POND (Province of Ontario Neurodevelopmental Disorders) network clinical trial data, in collaboration with CROs, hospital clinical leadership, and non-profit partners.</li>
+          <li><span class="bio-date">2025</span><span class="bio-partner">CROs &amp; Clinical Leadership</span><strong>Data Scientist, Waypoint Centre for Mental Health Care</strong> — production AI deployment in healthcare; EHR integration via Azure ML; regulatory-compliant ML pipelines, built alongside CROs, hospital clinical leadership, and community mental health partners.</li>
         </ul>
         <p class="hero-bio">
           Looking ahead, I want to extend this embodied AI work toward <strong>robot learning, robot foundation models, and diffusion-based generative models for embodied agents</strong> — world model architectures that generalize across tasks and embodiments. My interpretability background also points toward a direction I care about deeply: <strong>AI safety and security</strong>. Building evaluation frameworks for explanation faithfulness under DARPA/AFRL gave me a concrete foothold in <strong>mechanistic interpretability of LLMs</strong>, understanding what circuits and features actually encode rather than just what outputs look like, and I want to bring that same rigor to trustworthy, verifiable AI systems.
@@ -440,7 +440,129 @@
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section-title reveal">Projects</h2>
-      <p class="coming-soon-note">To be updated soon.</p>
+      <p class="projects-intro reveal">
+        A selection of research and applied projects across embodied AI, clinical deployment,
+        interpretability, and computational neuroscience. Where a project has an associated
+        publication, the card links directly to it.
+      </p>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-teal">Embodied AI</span>
+            <span class="project-status">Ongoing</span>
+          </div>
+          <p class="project-title">AI-Driven Scaffolding of Embodied Creativity</p>
+          <p class="project-desc">Real-time pipeline at SUTD estimating learners' internal world models from motion-capture data, using Bayesian inverse RL and diffusion-based goal generation to adaptively scaffold open-ended movement exploration.</p>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-purple">Clinical AI</span>
+            <span class="project-meta-year">Waypoint / Holland Bloorview · 2025</span>
+          </div>
+          <p class="project-title">Precision Health Medication Recommendation System</p>
+          <p class="project-desc">AI-based medication recommendation system built to support clinicians' treatment decisions for neurodivergent populations, deployed toward improving treatment precision and outcomes.</p>
+          <a class="project-link" href="https://www.medrxiv.org/content/10.1101/2025.03.12.25323683v4" target="_blank">medRxiv ↗</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-blue">LLMs / VSA</span>
+            <span class="project-meta-year">UWaterloo · 2024</span>
+          </div>
+          <p class="project-title">Vector-Symbolic Medical Ontology Encoding</p>
+          <p class="project-desc">Vector-symbolic architecture combining symbolic computation with transformer models to encode SNOMED-CT medical ontologies, built in collaboration with a Toronto-based health-tech startup for structured clinical NLP on EHR data.</p>
+          <a class="project-link" href="https://openreview.net/forum?id=LN4zA2D8vd" target="_blank">OpenReview ↗</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-orange">XAI &amp; Interpretability</span>
+            <span class="project-meta-year">Rutgers-Newark / Mila · 2022</span>
+          </div>
+          <p class="project-title">Perceptual &amp; Semantic Saliency Interpretability Metrics</p>
+          <p class="project-desc">New metrics for evaluating whether saliency-based explanations in medical-imaging models actually reflect what the model is doing, developed under a DARPA/AFRL-funded project and tested on melanoma classification.</p>
+          <a class="project-link" href="https://doi.org/10.1002/ail2.77" target="_blank">DOI ↗</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-green">Computational Neuroscience / Biosignals</span>
+            <span class="project-meta-year">Rutgers · 2020</span>
+          </div>
+          <p class="project-title">Digitized ADOS: Biosensor-Based Digital Biomarkers</p>
+          <p class="project-desc">Wearable biosensors and statistical signal processing applied to the Autism Diagnostic Observation Schedule (ADOS), extracting sub-second kinematic features from clinician-child interactions invisible to the naked eye.</p>
+          <a class="project-link" href="https://doi.org/10.3390/jpm10040159" target="_blank">DOI ↗</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-green">Computational Neuroscience / Biosignals</span>
+            <span class="project-meta-year">Rutgers · 2020</span>
+          </div>
+          <p class="project-title">Neural Connectivity Evolution during Adaptive Learning</p>
+          <p class="project-desc">Network-theoretic analysis of EEG-derived neural connectivity as participants learned novel motor tasks with and without proprioceptive feedback, showing how sensorimotor deprivation reshapes cortical communication.</p>
+          <a class="project-link" href="https://doi.org/10.1145/3401956.3404232" target="_blank">DOI ↗</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-purple">Clinical AI</span>
+            <span class="project-meta-year">Holland Bloorview · 2024–2025</span>
+          </div>
+          <p class="project-title">Sociodemographic Bias in Adaptive Functioning Data <span class="mentorship-badge">Mentorship</span></p>
+          <p class="project-desc">Mentored intern research using the POND Network dataset and XGBoost to surface statistically significant disparities in adaptive functioning scores across socioeconomic status, sex, and ethnicity subgroups.</p>
+          <a class="project-link" href="https://hollandbloorview.ca/sites/default/files/2024-07/Zuhair%20Qureshi%20poster.pdf" target="_blank">Poster PDF ↗</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-purple">Clinical AI</span>
+            <span class="project-meta-year">Holland Bloorview / UofT · 2025</span>
+          </div>
+          <p class="project-title">Autism Traits, Arousal &amp; Anxiety: A Structural Equation Model</p>
+          <p class="project-desc">Structural equation modeling study examining how autism traits, physiological arousal, and emotion dysregulation jointly predict anxiety in children, contributing biosignal analysis from wearable sensor data across the POND Network.</p>
+          <a class="project-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5270022" target="_blank">SSRN ↗</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-purple">Clinical AI</span>
+            <span class="project-meta-year">Holland Bloorview · 2024</span>
+          </div>
+          <p class="project-title">Predictors of Health-Related Quality of Life in Neurodivergent Children</p>
+          <p class="project-desc">Systematic review synthesizing evidence on quality-of-life predictors across neurodevelopmental conditions, used to inform precision-health AI pipeline design at Holland Bloorview.</p>
+          <a class="project-link" href="https://link.springer.com/article/10.1007/s10567-023-00462-3" target="_blank">Springer ↗</a>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="tag tag-purple">Clinical AI</span>
+            <span class="project-status">In Preparation</span>
+          </div>
+          <p class="project-title">Cellular Senescence Classification from Live-Cell Microscopy</p>
+          <p class="project-desc">Volunteer collaboration with SickKids Hospital / University of Toronto: a time-series deep learning pipeline (BiLSTM) classifying cellular senescence states, with SHAP-based explainability and rigor checks against over-claiming interpretability, engineered on Compute Canada's national HPC cluster for a project targeting <em>Nature Ageing</em>.</p>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="project-status">MS Thesis · Semiconductor Manufacturing</span>
+          </div>
+          <p class="project-title">Deep Learning-Based Virtual Metrology for Semiconductor Processes</p>
+          <p class="project-desc">Deep learning models predicting process-critical measurements directly from sensor data in semiconductor manufacturing, reducing reliance on costly physical metrology steps. MS thesis, Rutgers Industrial &amp; Systems Engineering.</p>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-meta">
+            <span class="project-status">Industry 4.0 · Manufacturing</span>
+          </div>
+          <p class="project-title">IoT-Driven Process Monitoring &amp; Fault Diagnosis</p>
+          <p class="project-desc">Control charts, statistical reliability analysis, and IoT sensor data pipelines to monitor manufacturing processes and diagnose faults at UltraTech (Aditya Birla Group), coordinating across contract firms, suppliers, and DuPont safety teams.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -637,7 +759,7 @@
             <li>
               <strong>Research Engineer</strong>
               <span class="cv-where">Holland Bloorview Kids Rehabilitation Hospital, Toronto &nbsp;·&nbsp; Jan 2023–May 2025</span>
-              <span class="cv-note">Precision health AI for neurodivergent populations · medication recommendation modeling · biosignal processing (EEG, accelerometry, wearables) · multi-site clinical trial data across the POND (Province of Ontario Neurodevelopmental Disorders) Network (n&gt;1,200) · clinical data management (REDCap) and analysis pipelines (PostgreSQL) · mentored intern research · collaborated with CROs, hospital clinical leadership, and non-profit partners across the POND network</span>
+              <span class="cv-note">Precision health AI for neurodivergent populations · medication recommendation modeling · biosignal processing (EEG, accelerometry, wearables) · multi-site clinical trial data across the POND (Province of Ontario Neurodevelopmental Disorders) Network (n&gt;3,000) · clinical data management (REDCap) and analysis pipelines (PostgreSQL) · mentored intern research · collaborated with CROs, hospital clinical leadership, and non-profit partners across the POND network</span>
             </li>
             <li>
               <strong>Project Engineer</strong>

@@ -21,6 +21,8 @@
   --purple-light:#f3f0ff;
   --green:      #16a34a;
   --green-light:#f0fdf4;
+  --rose:       #be123c;
+  --rose-light: #fff1f2;
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body:    'Inter', sans-serif;
@@ -136,6 +138,7 @@ img { max-width: 100%; display: block; }
 .tag-blue   { background: var(--blue-light);   color: var(--blue); }
 .tag-orange { background: var(--orange-light); color: var(--orange); }
 .tag-purple { background: var(--purple-light); color: var(--purple); }
+.tag-green  { background: var(--green-light);  color: var(--green); }
 
 .hero-links { display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
 .btn {
@@ -217,6 +220,48 @@ img { max-width: 100%; display: block; }
 @media (max-width: 720px) {
   .areas-grid { grid-template-columns: 1fr; }
 }
+
+/* ═══════ PROJECTS ═══════ */
+.projects-intro {
+  font-size: 0.95rem; color: var(--text-muted);
+  max-width: 700px; margin-bottom: 2rem; line-height: 1.75;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  display: flex; flex-direction: column; gap: 0.65rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.project-card:hover { box-shadow: var(--shadow); border-color: #c8d4e8; }
+.project-meta {
+  font-size: 0.76rem; color: var(--text-light);
+  display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+}
+.project-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 1rem;
+  color: var(--text); line-height: 1.35; letter-spacing: -0.01em;
+}
+.project-desc {
+  font-size: 0.85rem; color: #374560; line-height: 1.7; flex-grow: 1;
+}
+.project-status {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.02em;
+  color: var(--text-light); background: #eef1f6;
+  padding: 0.15rem 0.5rem; border-radius: 4px; display: inline-block;
+}
+.project-link {
+  font-size: 0.82rem; font-weight: 600;
+  color: var(--teal); text-decoration: none;
+}
+.project-link:hover { color: var(--blue); }
 
 /* ═══════ PUBLICATION GROUPS ═══════ */
 .pub-groups { display: flex; flex-direction: column; }
@@ -806,6 +851,21 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.04em;
   color: var(--teal);
   background: var(--teal-light);
+  border-radius: 4px;
+  padding: 0.05rem 0.45rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* ═══ BIO TRAIL PARTNER/STAKEHOLDER BADGE ═══ */
+.bio-partner {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--rose);
+  background: var(--rose-light);
   border-radius: 4px;
   padding: 0.05rem 0.45rem;
   margin-right: 0.5rem;
