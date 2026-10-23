@@ -390,7 +390,7 @@ img { max-width: 100%; display: block; }
 
 /* ═══════ CV ═══════ */
 .cv-grid {
-  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem;
 }
 .cv-block {
   background: var(--surface); border: 1px solid var(--border);
@@ -406,7 +406,7 @@ img { max-width: 100%; display: block; }
 .cv-list li { font-size: 0.925rem; }
 .cv-list strong { color: var(--text); font-weight: 600; }
 .cv-where { display: block; font-size: 0.82rem; color: var(--text-muted); margin-top: 0.1rem; }
-.cv-note  { display: block; font-size: 0.8rem; color: var(--text-light); font-style: italic; margin-top: 0.15rem; }
+.cv-note  { display: block; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-top: 0.2rem; }
 
 .skills-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .skill-tag {
