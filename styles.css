@@ -926,3 +926,6 @@ img { max-width: 100%; display: block; }
 @media (max-width: 580px) {
   .nav-cv { font-size: 0.85rem; padding: 0.4rem 0.8rem; }
 }
+
+/* ═══ ORGANIZATION NAMES IN EXPERIENCE & EDUCATION ═══ */
+.cv-org { color: var(--teal); font-weight: 600; }
